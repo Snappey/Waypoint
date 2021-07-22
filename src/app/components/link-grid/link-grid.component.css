@@ -1,0 +1,44 @@
+
+/*
+    Duplicated inside link-card.component.css because this ui library sucks
+*/
+
+:host ::ng-deep .p-chip.Open-World {
+    background: #55efc4;
+    color: #495057;
+}
+
+:host ::ng-deep .p-chip.PvP {
+    background: #6c5ce7;
+    color: #495057;
+}
+
+:host ::ng-deep .p-chip.WvW {
+    background: #ff7675;
+    color: #495057;
+}
+
+:host ::ng-deep .p-chip.Raids {
+    background: #00b894;
+    color: #495057;
+}
+
+:host ::ng-deep .p-chip.Fractals {
+    background: #81ecec;
+    color: #495057;
+}
+
+:host ::ng-deep .p-chip.Guild {
+    background: #fdcb6e;
+    color: #495057;
+}
+
+:host ::ng-deep .p-chip.Guide {
+    background: #0984e3;
+    color: #495057;
+}
+
+:host ::ng-deep .p-chip.Tool {
+    background: #0984e3;
+    color: #495057;
+}

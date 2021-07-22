@@ -1,0 +1,33 @@
+<div class="grid grid-nogutter mx-8">
+    <div class="col-12 mb-5">
+        <div class="flex justify-content-center">                   
+            <span class="p-input-icon-left">
+                <i class="pi pi-search"></i>
+                <input type="text" [formControl]="searchControl" pInputText class="p-inputtext-lg text-center" placeholder="Search..." />
+            </span>
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="flex justify-content-center mt-2">
+            <ng-container *ngIf="!filtering">
+                <ng-container *ngIf="!filtered">
+                    <p-chip *ngFor="let tag of tags"  class="mx-1 clickable" [styleClass]="tag" [label]="tag" (click)="filterByTag(tag)"></p-chip>
+                </ng-container>
+                <ng-container *ngIf="filtered">
+                    <ng-container *ngIf="selectedTag !== ''">
+                        <span class="text-lg">Filtering by <p-chip class="mx-1 clickable" [styleClass]="selectedTag" [label]="selectedTag" (click)="filterByTag('')" [removable]="true"></p-chip></span>
+                    </ng-container>
+                    <ng-container *ngIf="searchQuery !== ''">
+                        <span class="text-lg">Filtering by <p-chip class="mx-1 clickable" [label]="searchQuery" (click)="searchControl.setValue('')" [removable]="true"></p-chip></span>
+                    </ng-container>
+                </ng-container>
+            </ng-container>
+            <ng-container *ngIf="filtering">
+                <p-progressSpinner></p-progressSpinner>
+            </ng-container>
+        </div>
+    </div>
+    <div class="col-12 md:col-6 xl:col-4 p-3" *ngFor="let link of links">
+        <app-link-card [data]="link"></app-link-card>
+    </div>
+</div>
