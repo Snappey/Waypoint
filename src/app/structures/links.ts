@@ -55,7 +55,7 @@ export const Links: Link[] = [
         title: "[LN] Lucky Noobs",
         subtitle: "High End Raid Guild (DE)",
         description: "Meta raid builds compositions with class guides for each boss in raids.",
-        tags: ["Raids"],
+        tags: ["Raids", "Guild"],
         urls: { "Website": "https://lucky-noobs.com/", "Discord": "https://discord.com/invite/cAUcKCR" }
     },
     {
