@@ -164,7 +164,7 @@ export const Links: Link[] = [
         urls: { "Website": "https://gw2scratch.com/", "Discord": "https://discord.gg/rNXRS6ZkYe" }
     },
     {
-        title: "TaCo",
+        title: "Taco",
         subtitle: "Tactical Overlay",
         description: "Overlays a window on your screen displaying markers and guides ingame",
         tags: ["Tools"],
