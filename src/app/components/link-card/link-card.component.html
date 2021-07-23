@@ -17,7 +17,7 @@
     <div class="grid pt-3">
         <div class="col" *ngFor="let link of data.urls | keyvalue">
             <a [href]="link.value">
-                <button pButton [label]="link.key" style="width: 100%" class="p-button-outlined p-button-secondary mx-1"></button>
+                <button pButton [label]="link.key" style="width: 100%" class="p-button-outlined p-button mx-1"></button>
             </a>
         </div>
     </div>
