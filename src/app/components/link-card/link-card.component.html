@@ -4,10 +4,10 @@
         <div class="flex flex-column justify-content-between">
             <span class="text-2xl text-900 font-medium">{{data.title}}</span>
             <span class="text-md text-600 font-medium">{{data.subtitle}}</span>
-            <div class="mt-2">
-                <p-chip *ngFor="let tag of data.tags" [styleClass]="tag" class="mx-1" [label]="tag"></p-chip>
-            </div>
         </div>
+    </div>
+    <div class="flex flex-wrap mb-1">
+        <p-chip *ngFor="let tag of data.tags" [styleClass]="tag" class="p-1" [label]="tag"></p-chip>
     </div>
     <div class="flex border-bottom-1 surface-border pb-3">
         <div>
@@ -20,6 +20,5 @@
                 <button pButton [label]="link.key" style="width: 100%" class="p-button-outlined p-button-secondary mx-1"></button>
             </a>
         </div>
-
     </div>
 </div>

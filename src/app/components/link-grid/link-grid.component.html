@@ -1,4 +1,4 @@
-<div class="grid grid-nogutter mx-8">
+<div class="grid grid-nogutter">
     <div class="col-12 mb-5">
         <div class="flex justify-content-center">                   
             <span class="p-input-icon-left">
@@ -8,17 +8,17 @@
         </div>
     </div>
     <div class="col-12">
-        <div class="flex justify-content-center mt-2">
+        <div class="flex flex-wrap  justify-content-center mt-2">
             <ng-container *ngIf="!filtering">
                 <ng-container *ngIf="!filtered">
-                    <p-chip *ngFor="let tag of tags"  class="mx-1 clickable" [styleClass]="tag" [label]="tag" (click)="filterByTag(tag)"></p-chip>
+                    <p-chip *ngFor="let tag of tags"  class="m-1 clickable" [styleClass]="tag" [label]="tag" (click)="filterByTag(tag)"></p-chip>
                 </ng-container>
                 <ng-container *ngIf="filtered">
                     <ng-container *ngIf="selectedTag !== ''">
-                        <span class="text-lg">Filtering by <p-chip class="mx-1 clickable" [styleClass]="selectedTag" [label]="selectedTag" (click)="filterByTag('')" [removable]="true"></p-chip></span>
+                        <span class="text-lg text-white">Filtering by <p-chip class="mx-1 clickable" [styleClass]="selectedTag" [label]="selectedTag" (click)="filterByTag('')" [removable]="true"></p-chip></span>
                     </ng-container>
                     <ng-container *ngIf="searchQuery !== ''">
-                        <span class="text-lg">Filtering by <p-chip class="mx-1 clickable" [label]="searchQuery" (click)="searchControl.setValue('')" [removable]="true"></p-chip></span>
+                        <span class="text-lg text-white">Filtering by <p-chip class="mx-1 clickable" [label]="searchQuery" (click)="searchControl.setValue('')" [removable]="true"></p-chip></span>
                     </ng-container>
                 </ng-container>
             </ng-container>
@@ -27,7 +27,7 @@
             </ng-container>
         </div>
     </div>
-    <div class="col-12 md:col-6 xl:col-4 p-3" *ngFor="let link of links">
+    <div class="col-12 lg:col-6 xl:col-4 p-3" *ngFor="let link of links">
         <app-link-card [data]="link"></app-link-card>
     </div>
 </div>
